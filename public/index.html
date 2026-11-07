@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Lost & Found Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <nav class="navbar">
+        <a class="brand" href="/">Campus Lost & Found</a>
+        <div class="nav-links" id="navLinks"></div>
+    </nav>
+
+    <main class="container">
+        <section class="hero">
+            <h1>Lost something on campus?</h1>
+            <p>Find your belongings or help another student recover theirs.
+               Search reports or submit a lost and found listing.</p>
+            <a href="/report.html" class="btn btn-secondary">Report an Item</a>
+        </section>
+
+        <section class="toolbar">
+            <h2>Find an Item</h2>
+            <form id="searchForm">
+                <div class="search-grid">
+                    <div class="form-group">
+                        <label for="search">Keyword</label>
+                        <input id="search" type="search" placeholder="Wallet, bottle, keys...">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="category">Category</label>
+                        <select id="category">
+                            <option value="">All categories</option>
+                            <option>Electronics</option>
+                            <option>Books</option>
+                            <option>Accessories</option>
+                            <option>Bags</option>
+                            <option>Documents</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="location">Location</label>
+                        <input id="location" placeholder="Library, Block A...">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="type">Type</label>
+                        <select id="type">
+                            <option value="">Lost & Found</option>
+                            <option value="Lost">Lost</option>
+                            <option value="Found">Found</option>
+                        </select>
+                    </div>
+
+                    <button class="btn" type="submit">Search</button>
+                </div>
+
+                <div class="form-group">
+                    <label for="sort">Sort by date</label>
+                    <select id="sort" onchange="document.querySelector('#searchForm').requestSubmit()">
+                        <option value="newest">Newest first</option>
+                        <option value="oldest">Oldest first</option>
+                    </select>
+                </div>
+
+                <button class="btn btn-secondary" id="resetSearch" type="button">
+                    Clear Filters
+                </button>
+            </form>
+        </section>
+
+        <h2 class="section-title">Recently Reported Items</h2>
+        <section id="itemsList" class="items-grid" aria-live="polite">
+            <p class="empty-state">Loading items...</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        Sai University · Campus Lost and Found Portal
+    </footer>
+</body>
+</html>

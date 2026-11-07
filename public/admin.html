@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Campus Lost & Found</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <nav class="navbar">
+        <a class="brand" href="/">Campus Lost & Found</a>
+        <div class="nav-links" id="navLinks"></div>
+    </nav>
+
+    <main class="container">
+        <h1>Admin Dashboard</h1>
+        <p>Manage reported items, review claims and monitor portal activity.</p>
+
+        <div id="adminMessage" class="message hidden" role="alert"></div>
+
+        <h2 class="section-title">Portal Statistics</h2>
+        <section id="adminStats" class="stats-grid">
+            <p class="empty-state">Loading statistics...</p>
+        </section>
+
+        <h2 class="section-title">Manage Items</h2>
+        <section id="adminItems" class="items-grid">
+            <p class="empty-state">Loading items...</p>
+        </section>
+
+        <h2 class="section-title">Review Claims</h2>
+        <section id="adminClaims" class="items-grid">
+            <p class="empty-state">Loading claims...</p>
+        </section>
+    </main>
+
+    <footer class="footer">Sai University · Administrator Portal</footer>
+</body>
+</html>

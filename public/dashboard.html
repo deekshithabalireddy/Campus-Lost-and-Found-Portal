@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Dashboard | Campus Lost & Found</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <nav class="navbar">
+        <a class="brand" href="/">Campus Lost & Found</a>
+        <div class="nav-links" id="navLinks"></div>
+    </nav>
+
+    <main class="container">
+        <h1>My Dashboard</h1>
+        <p>Welcome, <strong id="welcomeName">Student</strong>!</p>
+
+        <div id="dashboardMessage" class="message hidden" role="alert"></div>
+
+        <div class="actions" style="margin:20px 0">
+            <a href="/report.html" class="btn">+ Report an Item</a>
+            <a href="/" class="btn btn-secondary">Browse Listings</a>
+        </div>
+
+        <section>
+            <h2 class="section-title">My Reports</h2>
+            <div id="myItems" class="items-grid">
+                <p class="empty-state">Loading reports...</p>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">My Claims</h2>
+            <div id="myClaims" class="items-grid">
+                <p class="empty-state">Loading claims...</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">Campus Lost and Found Portal</footer>
+</body>
+</html>
